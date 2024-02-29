@@ -112,7 +112,7 @@ int check_moved_nums(int arr[], int i, int n, int *high, int *low, int target) {
         }
         return 0;
     }
-    if (arr[i] < target) {
+    if (arr[i] < target && arr[n - 1] >= target) {
 
         *low = i + 1;
     } else {
