@@ -47,10 +47,6 @@ int search_shift_arr(int arr[], int n, int target) {
     int high = n - 1;
     int mid;
     while (low <= high) {
-        if (high + low == 1 && arr[1] == target) {
-            //special case
-            return 1;
-        }
         mid = (high + low) / 2;
         if (arr[mid] == target) {
             //returning value if fund
@@ -60,7 +56,6 @@ int search_shift_arr(int arr[], int n, int target) {
         //above checking situation
     }
     return -1;
-
 }
 
 int sit_check(int *high, int *low, int *mid, int arr[], int *target, int *n) {
